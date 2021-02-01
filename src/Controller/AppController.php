@@ -30,8 +30,38 @@ class AppController extends AbstractController
     {
         return $this->render('app/login.html.twig', [
             'titreSite' => $_SESSION['titre'],
-            'text' => 'Je suis dans login',
+            'text' => $_SESSION['titreConnexion'],
             'controler_name' => 'AppController',
         ]);
+    }
+
+
+    /**
+     * @Route ("/loginOk", name="loginOk")
+     */
+    public function loginOk(): Response
+    {
+        if ($_POST['pseudo'] == "Florian" && $_POST['pwd'] == "0000"){
+        return $this->render('app/essaiConnexion.html.twig', [
+            'titreSite' => $_SESSION['titre'],
+            'titreConnexion' => 'Connexion réussie',
+            'pseudo' => $_POST['pseudo'],
+            'pwd' => $_POST['pwd'],
+            'text' => 'Votre peuso est : ',
+            'textpwd' => 'Votre passeword est : ',
+            'controler_name' => 'AppController',
+        ]);
+        }
+        else {
+            return $this->render('app/essaiConnexion.html.twig', [
+                'titreSite' => $_SESSION['titre'],
+                'titreConnexion' => 'Echec de la connexion',
+                'pseudo' => '',
+                'pwd' => $_POST['pwd'],
+                'text' => '',
+                'textpwd' => '',
+                'controler_name' => 'AppController',
+            ]);
+        }
     }
 }

@@ -19,7 +19,7 @@ class LuckyController
     public function list(): Response
     {
         return new Response(
-            '<html><body>"Hello world encore une fois siteMaman !"</body></html>'
+            '<html><body>"Hello world encore une fois FLEVALLIS !"</body></html>'
         );
     }
 }
