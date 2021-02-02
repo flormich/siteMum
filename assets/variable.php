@@ -1,10 +1,12 @@
 <?php
-session_start();
+if(!isset($_SESSION)){
+    session_start();
+}
 
-$_SESSION['titre'] = "Site Maman";
+$_SESSION['titre'] = "FLEVALLIS";
+$_SESSION['titreConnexion'] = "Connexion";
 
 
-// $titreSite = "Site Maman";
 
 
 ?>

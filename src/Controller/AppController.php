@@ -6,7 +6,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 include __DIR__ . '/../../assets/variable.php';
-// session_start();
 
 class AppController extends AbstractController
 {

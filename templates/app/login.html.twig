@@ -1,45 +1,42 @@
 {% extends 'base.html.twig' %}
 
-{# {% block title %} $titreSite Site Maman {% endblock %} #}
 {% block title %} {{ titreSite }} {% endblock %}
 
 {% block body_id %}app{% endblock %}
 
-{% block header %}
-
-    {# {% include 'shared/_header.html.twig' %} #}
-{% endblock %}
+{% block header %} {# {% include 'shared/_header.html.twig' %} #} {% endblock %}
 
 {% block main %}
     {% include 'baseOpen.html.php' %}
         <div class="backgroundCreate heightMoy">
-            <br><br><center>
-                <h3><b><u> {{ text }} </u></b></h3>
+            <br><br>
+            <center><h3><b><u> {{ text }} </u></b></h3>
+            <br>
+            <form action="loginOk" method="post">
+                <div>
+                    <label for="uname">Veuillez indiquer votre mail :</label>
+                    <input type="text" id="uname" name="name" placeholder="Mail">
+                </div>
                 <br>
-                <form>
-                    <div>
-                        <label for="uname">Veuillez indiquer votre mail :</label>
-                        <input type="text" id="uname" name="name" placeholder="Mail">
-                    </div>
-                    <br>
-                    {# <div>
-                        <button>Envoyer</button>
-                    </div> #}
-                    <div>
-                        <label for="password">Veuillez indiquer votre mdp :</label>
-                        <input type="text" id="pwd" name="pwd" placeholder="Mot de passe">
-                    </div>
-                </form>
+                <div>
+                    <label for="uname">Veuillez indiquer un speudo :</label>
+                    <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo">
+                </div>
+                <br>
+                <div>
+                    <label for="password">Veuillez indiquer votre mdp :</label>
+                    <input type="text" id="pwd" name="pwd" placeholder="Mot de passe">
+                </div>
                 <br>
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--myColorValidate bigButton" type="submit">
                     <a href="home" style="color:black; text-decoration:none">Annuler</a>
                 </button>
                 &nbsp;&nbsp;
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--myColorValidate middleButton" type="submit">
-                    <a href="createStore" style="color:black; text-decoration:none">Valider</a>
+                    <a style="color:black; text-decoration:none">Valider</a>
                 </button>
+            </form>
         </div>
-
-    {% include 'baseClose.html.php' %}
-
+    {% include 'footer.html.php' %}
 {% endblock %}
+

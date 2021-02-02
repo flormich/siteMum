@@ -27,7 +27,7 @@ class Scraps
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $descrition;
+    private $description;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -82,14 +82,14 @@ class Scraps
         return $this;
     }
 
-    public function getDescrition(): ?string
+    public function getDescription(): ?string
     {
-        return $this->descrition;
+        return $this->description;
     }
 
-    public function setDescrition(?string $descrition): self
+    public function setDescription(?string $description): self
     {
-        $this->descrition = $descrition;
+        $this->description = $description;
 
         return $this;
     }

@@ -1,35 +1,29 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Site Maman">
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title></title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="FLEVALLIS">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="../assets/css/login.css">
-    <link rel="stylesheet" href="../assets/css/menu.css">
-    <link rel="stylesheet" href="../assets/css/button.css">
-    <link rel="stylesheet" href="../assets/css/formulaire.css">
-    <link rel="stylesheet" href="../assets/css/read.css"> 
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-</head>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+      <link rel="stylesheet" href="../assets/css/app.css">
+      <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+  </head>
 
     <!-- Always shows a header, even in smaller screens. -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header margin-0">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header margin-0">
   <header class="mdl-layout__header bandeau blue">
     <div class="mdl-layout__header-row ">
       <!-- Title -->
+     <!-- Menu du haut -->
       <span class="mdl-layout-title">
-
-      <!-- <a class="mdl-navigation__link" href="index"><img src= "../assets/pictures/icones/UrgenceEmploi.jpg" alt="StoreFreeze" width="25%"></a>-->
-      <a class="mdl-navigation__link bandoIconeStoreFreeze" href="home"><img src="../assets/images/icone/StoreFreeze.jpg" alt="Accueil" width="12%" title="Accueil">&nbsp Accueil</a>
-
+        <a class="mdl-navigation__link bandoIconeStoreFreeze" href="home">&nbsp;<img src="../assets/images/icones/news.png" alt="Actualités" width="40%" title="Actualités"></a>
       </span>
       <!-- Add spacer, to align navigation to the right -->
-
 
       <div class="mdl-layout-spacer"></div>
             <!-- Add spacer, to align navigation to the right -->
@@ -47,11 +41,11 @@
 -->
       </div>
 
-      <!--Menu du haut -->
+      <!-- Menu du haut droit -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link bandoIconeStoreProduct" href="readStore"><img src="../assets/images/icone/product.jpg" width="40%" title="Produits">&nbsp Produits</a>
-        <a class="mdl-navigation__link bandoIconeStoreProduct" href="readRecette"><img src="../assets/images/icone/cookbook.jpg" width="40%" title="Recettes">&nbsp Recettes</a>&nbsp &nbsp
-        <a class="mdl-navigation__link bandoIconeStoreProduct" href="readOrder"><img src="../assets/images/icone/shopping.png" width="40%" title="Commandeeeeer">&nbsp Commander</a>
+        <!-- <a class="mdl-navigation__link bandoIconeStoreProduct" href="readStore"><img src="../assets/images/icone/product.jpg" width="30%" title="Produits"></a>
+        <a class="mdl-navigation__link bandoIconeStoreProduct" href="readRecette"><img src="../assets/images/icone/cookbook.jpg" width="30%" title="Recettes"></a> -->
+        <a class="mdl-navigation__link bandoIconeStoreProduct" href="readOrder"><img src="../assets/images/icones/shopping.png" width="40%" title="Commander" text-align="center"> </a>
         
         <!-- <a class="mdl-navigation__link" href="showCv">Voir CV</a>
         <a class="mdl-navigation__link" href="newCv">Créer CV</a> -->
@@ -79,15 +73,14 @@
     <span class="mdl-layout-title">
     </span>
     <nav class="mdl-navigation menuLeft">
-    <a class="menuLeft" href="home"><img src="../assets/images/icone/StoreFreeze.jpg" width="70%" title="Accueil"></a>
+      <a class="menuLeft" href="home"><img src="../assets/images/icones/news.png" width="20%" title="Actualités">Actualités</a>
       <hr color="blue" size="10px">
-      <a class="menuLeft" href="readStore"><img src="../assets/images/icone/product.jpg" width="40%" title="Produits">
-      <a class="menuLeft" href="readRecette"><img src="../assets/images/icone/cookbook.jpg" width="40%" title="Recettes"></a></a>
-      <a class="menuLeft" href="readOrder"><img src="../assets/images/icone/shopping.png" width="40%" title="Commander"></a>
-      <br><br><br><br>
-      <hr color="blue" size="10px">
-      <a class="menuLeft" href="loginConnex"><img src="../assets/images/icone/shopping.png" width="40%" title="Connexion"></a>
-      <br><br>
+      <!-- <a class="menuLeft" href="readStore"><img src="../assets/images/icone/product.jpg" width="20%" title="Produits">
+      <a class="menuLeft" href="readRecette">&nbsp; &nbsp;<img src="../assets/images/icone/cookbook.jpg" width="20%" title="Recettes"></a></a> -->
+      <a class="menuLeft " href="readOrder"><img src="../assets/images/icones/shopping.png" width="20%" title="Commander">Commander</a>
+      <hr class="barreconnexion" color="blue" size="10px">
+      <a class="menuLeft menuconnexion" href="loginConnex"><img src="../assets/images/icones/login.png" width="20%" title="Connexion" text-align="center">Connexion</a>
+
       
 <!--       
       <a class="mdl-navigation__link" href="new">S'inscrire</a>
