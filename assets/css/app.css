@@ -99,7 +99,7 @@
 .textShadow {
     text-shadow: 4px 4px 8px rgb(30, 30, 30);
     /* font-weight : bolder; */
-    font-size: medium;
+    /* font-size: medium; */
 }
 
 caption {

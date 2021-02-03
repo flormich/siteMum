@@ -59,10 +59,16 @@ class Scraps
      */
     private $link_id;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=key::class)
+     */
+    private $cle;
+
     public function __construct()
     {
         $this->theme_id = new ArrayCollection();
         $this->link_id = new ArrayCollection();
+        $this->cle = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -186,6 +192,30 @@ class Scraps
     public function removeLinkId(link $linkId): self
     {
         $this->link_id->removeElement($linkId);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|key[]
+     */
+    public function getCle(): Collection
+    {
+        return $this->cle;
+    }
+
+    public function addCle(key $cle): self
+    {
+        if (!$this->cle->contains($cle)) {
+            $this->cle[] = $cle;
+        }
+
+        return $this;
+    }
+
+    public function removeCle(key $cle): self
+    {
+        $this->cle->removeElement($cle);
 
         return $this;
     }

@@ -1,0 +1,22 @@
+.borderTableauUsers {
+    border: 1px black solid;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.widthColonneIconeUsers {
+    width: 15rem;
+}
+
+.widthColonneUsers {
+    width: 10rem;
+}
+
+.textTitleUsers {
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+.textTableauUsers {
+    color: black;
+}

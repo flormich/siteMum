@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ titreSite }} {% endblock %}
+
+{% block body_id %}app{% endblock %}
+
+{% block header %}
+
+    {# {% include 'shared/_header.html.twig' %} #}
+{% endblock %}
+
+{% block main %}
+    {% include 'baseOpen.html.php' %}
+    {# Corp de la page d'accueil #}
+    <div class="backgroundCreate heightMoy">
+        <br><center>
+        <h3><b><u>Articles en Détail</u></b></h3>
+        <h6><a href="readscrap" style="text-decoration:none">Retour</a></h6>
+    </div>
+
+    <div class="backgroundCreate">
+        <section class="paragraphe subtitle read ">
+            {% for scraps in scrap %}
+                <table class="tableauReadScrap backgroundWhite" style="border-collapse:collapse">
+                    <tbody class="pointerRead">
+                        <tr class="textShadow">
+                            <td class="borderTrue espaceTopBottom widthDescription" >{{ scraps.titre }}</td>
+                            <td class="borderTrue widthPhoto" rowspan="2">{{ scraps.photo }}</td>  
+                        </tr>
+                        <tr>
+                            <td class="borderTrue alignDescription">{{ scraps.description }}</td>                            
+                        </tr>
+                        <tr>
+                            <td class="borderTrue alignDescription">{{ scraps.DateCreate|date('d/m/Y') }}</td>
+                            <td class="borderTrue ">{{ scraps.KeyId }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+            {% endfor %}
+            {% include 'footer.html.php' %}
+        </section>
+    </div>
+{% endblock %}  

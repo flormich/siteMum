@@ -1,0 +1,30 @@
+.titleCenter {
+    text-align: center;
+    /* font-weight: bold; */
+}
+
+.alignDescription {
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.espaceTopBottom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.widthPhoto {
+    width: 40%;
+}
+
+.widthDescription {
+    width: 60%;
+}
+
+.borderTrueTopLeftRight {
+    border: 1px 1px 0px 1px solid black;
+}
+
+.textDecoration {
+    text-decoration: none;
+}

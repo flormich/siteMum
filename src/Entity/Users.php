@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UsersRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -43,10 +45,14 @@ class Users
     private $password;
 
     /**
-     * @ORM\ManyToOne(targetEntity=role::class)
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToOne(targetEntity=role::class, inversedBy="roleUser")
      */
-    private $role_id;
+    private $roleUser;
+
+    public function __construct()
+    {
+        $this->role = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -113,14 +119,14 @@ class Users
         return $this;
     }
 
-    public function getRoleId(): ?role
+    public function getRoleUser(): ?role
     {
-        return $this->role_id;
+        return $this->roleUser;
     }
 
-    public function setRoleId(?role $role_id): self
+    public function setRoleUser(?role $roleUser): self
     {
-        $this->role_id = $role_id;
+        $this->roleUser = $roleUser;
 
         return $this;
     }
